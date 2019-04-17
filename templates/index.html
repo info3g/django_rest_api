@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Testing</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">This is for testing</h1>
+        <h4 id="token"></h4>
+        <script>
+            document.cookie = "name=abc";
+            document.cookie = "name2=xyz";
+            console.log(document.cookie);
+            var cookies = document.cookie.split(";");
+            for (var cookie in cookies) {
+                var d = cookies[cookie].split('=')
+                var k = d[0].trim();
+                var v = d[1].trim();
+                console.log(`Key is : ${k} and value is : ${v}`);
+            }
+        </script>
+    </body>
+</html>
